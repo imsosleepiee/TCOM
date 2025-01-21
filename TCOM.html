@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+body {
+    cursor: url(''), auto;
+}
+        /* Marquee container styling */
+        .marquee-container {
+            width: 100%;
+            background-color: #000; /* Black background */
+            position: fixed; /* Stick it to the top */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure it stays above other elements */
+            animation: borderColorChange 7s linear infinite; /* Match the border color with text color */
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            box-sizing: border-box; /* Ensure border doesn't add extra width/height */
+        }
+    
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+    
+        .marquee span {
+            display: inline-block;
+            animation: marquee 77s linear infinite, colorChange 7s linear infinite;
+            font-family: 'Press Start 2P', monospace; /* Apply pixel/retro font */
+            font-size: 10px;
+            letter-spacing: 2px; /* Adjust spacing for better readability */
+        }
+    
+        /* Duplicate the text for seamless scrolling */
+        .marquee span::after {
+            content: " TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM ";
+        }
+    
+        /* Animation for text movement */
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    
+        /* Animation for text color changing */
+        @keyframes colorChange {
+            0%   { color: #ff0000; } /* Red */
+            25%  { color: #00ff00; } /* Green */
+            50%  { color: #0000ff; } /* Blue */
+            75%  { color: #ffff00; } /* Yellow */
+            100% { color: #ff0000; } /* Back to Red */
+        }
+    
+        /* Animation for border color changing (matches text color) */
+        @keyframes borderColorChange {
+            0%   { border-color: #ff0000; } /* Red */
+            25%  { border-color: #00ff00; } /* Green */
+            50%  { border-color: #0000ff; } /* Blue */
+            75%  { border-color: #ffff00; } /* Yellow */
+            100% { border-color: #ff0000; } /* Back to Red */
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Marquee container -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM •TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • TCOM • </span>
+        </div>
+    </div>
+</body>
+</html>
